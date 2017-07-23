@@ -1,140 +1,69 @@
 <template>
   <div class="hamabanner">
-    <img class="banner" src="./images/bg.png" alt="">
-    <img class="banner-left" src="./images/banner-left.png" alt="">
-    <div class="banner-right">
-      <div class="text-left">
-        <span class="banner-right-text text-title">无极蛤蟆线</span>
-        <span class="banner-right-text text-font-2">炒金 <img class="font-2" src="./images/font-2.png" alt="">钱</span>
-      </div>
-      <div class="text-right">
-        <img src="./images/font-1.png" alt="">
-        <span class="banner-right-text text-font-3">门槛</span>
-      </div>
-      <div class="text-small">
-        <span class="text-small-s1">准司机 : 炒金/汇赚钱0门槛 ! 炒金/汇问题1站式解决 !</span><br/>
-        <span class="text-small-s2">新司机 : 2秒辨涨跌 ! 3秒找点位 ! 4步成赢家 !</span><br/>
-        <span class="text-small-s3">老司机 : 精准抄底 ! 波段操作 !</span><br/>
-      </div>
-
-      <div class="banner-btn">
-        <a class="banner-btn-01" href="#">免费试用</a>
-        <a class="banner-btn-02" href="#">使用说明</a>
-      </div>
-    </div>
+    <el-row :gutter="24">
+      <el-col :span="6" :offset="5" class="banner-left">
+        <img src="./images/banner-left.png" alt="">
+      </el-col>
+      <el-col :span="6" :offset="4" class="vertical-line">
+        <p class="banner-text-title">无极蛤蟆线</p>
+        <p class="earn">炒金</p>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-  export default {}
+  export default {
+  }
 </script>
 
 <style lang="scss">
-  @mixin vertical-middle { //垂直居中
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate3d(-50%,-50%,0);
+  @import "../../common/common";
+  .hamabanner {
+    background: url("./images/bg.png") no-repeat;
+    height: 580px;
+    position: relative;
+    top: 125px;
   }
-  @mixin font { font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; }
-  .banner {
-    margin-top: 37px;
+  .banner-left img {
+    position: relative;
+    top: 55px;
   }
-  //banner图左边图片样式
-  .banner-left {
-    position: absolute;
-    top: 100px;
-    left: 250px;
-  }
-  //banner图右边的文字样式
-  .banner-right {
-    position: absolute;
-    right: 25%;
-    top: 135px;
-    width: 500px;
-    .banner-right-text {
-      @include font;
+  .earn {
+    background: url("./images/font-2.png") no-repeat 85% 50%;
+    height: 95px;
+    font-size: 65px;
+    text-align: center;
+    /*vertical-align: middle;*/
+    line-height: 110px;
+    font-family: "Microsoft YaHei",Arial,sans-serif;
+    font-weight: bold;
+    color: #fff;
+    &:after {
+      content: '钱';
+      /*display: block;*/
       font-size: 65px;
-      font-weight: bold;
-      color: #fff;
-      .font-2 {
-        position: relative;
-        top: 15px;
-      }
-    }
-    .text-left {
-      border-right: 3px solid #fff;
-      width: 325px;
-      height: 155px;
-      .text-font-2 {
-        position: relative;
-        top: 50px;
-      }
-    }
-    .text-right {
-      position: absolute;
-      top: 0;
-      right: -100px;
-      .text-font-3 {
-        position: relative;
-        bottom: 20px;
-      }
-    }
-    .text-title {
-      font-family: "Microsoft YaHei UI Light",Arial,sans-serif;
-      position: absolute;
-      top: 0;
-      right: 45%;
-      font-size: 45px;
-      font-weight: normal;
-      margin: 10px 0;
-    }
-    .text-small {
-      font-family: "Microsoft YaHei UI Light",Arial,sans-serif;
-      display: inline-block;
-      color: #fff;
-      font-size: 15px;
-      margin-left: 120px;
-      padding: 55px 0;
-      .text-small-s1 {
-        display: inline-block;
-        padding: 5px;
-        border-top: 1px solid rgb(122,122,122);
-        border-bottom: 1px solid rgb(122,122,122);
-      }
-      .text-small-s2 {
-        @extend .text-small-s1;
-        margin-top: 10px;
-        margin-left: 30px;
-      }
-      .text-small-s3 {
-        @extend .text-small-s1;
-        @extend .text-small-s2;
-        margin-left: 65px;
-      }
-    }
-    .banner-btn {
       position: relative;
-      top: 10px;
-      left: 170px;
-      .banner-btn-01 {
-        width: 130px;
-        height: 40px;
-        display: inline-block;
-        border: 2px solid;
-        color: #ffffff;
-        border-radius: 20px;
-        font-size: 20px;
-        text-align: center;
-        line-height: 40px;
-        font-family: "Microsoft YaHei",Arial,sans-serif;
-      }
-      .banner-btn-02 {
-        @extend .banner-btn-01;
-        margin-left: 40px;
-      }
+      left: 80px;
     }
   }
-
+  .banner-text-title {
+    font-family: "Microsoft YaHei UI Light",Arial,sans-serif;
+    font-size: 40px;
+    text-align: right;
+    color: #fff;
+  }
+  .vertical-line:after {
+    content: '';
+    display: block;
+    height: 130px;
+    border-right: 4px solid #fff;
+    position: relative;
+    top: -135px;
+    left: 45px;
+  }
+  .vertical-line {
+    margin-top: 100px;
+  }
 
 </style>

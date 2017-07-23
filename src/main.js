@@ -4,7 +4,9 @@ import Vue from 'vue'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import './common/reset.css'
-import './common/animate.css'
+// import Velocity from 'velocity-animate'
+// window.Velocity = window.velocity = Velocity
+// import 'velocity-animate/velocity.ui.js'
 import App from './App'
 
 Vue.config.productionTip = false

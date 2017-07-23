@@ -15,10 +15,9 @@
     <el-row :gutter="24" class="main-nav">
       <el-col :span="5" :offset="3"><img class="logo" src="./images/logo.png" alt=""></el-col>
       <el-col :span="10" :push="10">
-        <img class="fire" src="./images/fire_icon.png" alt="">
         <el-tabs @tab-click="handleClick">
           <el-tab-pane label="首页"></el-tab-pane>
-          <el-tab-pane label="直播"></el-tab-pane>
+          <el-tab-pane label="直播" class="fire"></el-tab-pane>
           <el-tab-pane label="熙隆学院"></el-tab-pane>
           <el-tab-pane label="蛤蟆线"></el-tab-pane>
           <el-tab-pane label="商城"></el-tab-pane>
@@ -49,7 +48,9 @@
     position: fixed;
     z-index: 3;
   }
-
+  .fire {
+    background: url("./images/fire_icon.png");
+  }
   //登陆注册栏
   .login {
     position: relative;
@@ -135,6 +136,9 @@
     @include font;
     color: #333;
     font-size: 20px;
+    &:nth-child(3) {
+      background: url("./images/fire_icon.png") no-repeat right center;
+    }
   }
   .el-tabs__active-bar {
     bottom: 4px;

@@ -28,6 +28,22 @@
   width: 45px;
   position: relative;
   top: -10px;
-  left: 35%;
+  left: 43%;
   margin-bottom: 30px
+}
+@mixin shade {
+  content: '';
+  display: inline-block;
+  width: 330px;
+  height: 450px;
+  position: absolute;
+  top: -22px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  background: #155EA1;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  z-index: -1;
 }

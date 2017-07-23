@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "element-ui": "^1.3.7",
+    "velocity": "^0.7.2",
+    "velocity-animate": "^1.5.0",
     "vue": "^2.3.3"
   },
   "devDependencies": {
