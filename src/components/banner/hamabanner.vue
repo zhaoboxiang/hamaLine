@@ -60,7 +60,7 @@
     border-right: 4px solid #fff;
     position: relative;
     top: -135px;
-    left: 45px;
+    left: 44px;
   }
   .vertical-line {
     margin-top: 100px;
